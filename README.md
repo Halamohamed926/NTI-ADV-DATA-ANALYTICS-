@@ -13,7 +13,7 @@ and get an estimated delivery time.
 ---
 🎯 Project Goal
 The main goal is to build a regression model that can predict:
-> \\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*`Time\\\\\\\\\\\\\\\_taken\\\\\\\\\\\\\\\_min` --- the total delivery time in minutes.\\\\\\\\\\\\\\\*\\\\\\\\\\\\\\\*
+> *`Time\_taken\_min` --- the total delivery time in minutes*
 The model can be useful for estimating delivery time for a new order
 based on the information available before or during delivery.
 ---
@@ -22,8 +22,8 @@ The project contains:
 ``` text
 Food-Delivery-Time-Prediction/
 │
-├── Final\\\\\\\\\\\\\\\_app.ipynb
-├── Food\\\\\\\\\\\\\\\_Delivery\\\\\\\\\\\\\\\_Time\\\\\\\\\\\\\\\_Prediction.csv
+├── Final_app.ipynb
+├── Food\\_Delivery_Time_Prediction.csv
 ├── app.py
 └── README.md
 ```
@@ -52,34 +52,34 @@ Dataset Columns
 ---
 Column                              Description
 ---
-`Order\\\\\\\\\\\\\\\_ID`                          Unique ID for each order
-`Order\\\\\\\\\\\\\\\_Date`                        Date when the order was placed
-`Order\\\\\\\\\\\\\\\_Hour`                        Hour when the order was placed
-`Day\\\\\\\\\\\\\\\_of\\\\\\\\\\\\\\\_Week`                       Day of the week
-`Is\\\\\\\\\\\\\\\_Weekend`                        Indicates whether the order was
+`Order_ID`                          Unique ID for each order
+`Order\_Date`                        Date when the order was placed
+`Order\_Hour`                        Hour when the order was placed
+`Day_of_Week`                       Day of the week
+`Is_Weekend`                        Indicates whether the order was
 placed on a weekend
-`Is\\\\\\\\\\\\\\\_Festival`                       Indicates whether the order was
+`Is_Festival`                       Indicates whether the order was
 placed during a festival
 `Weather`                           Weather condition during delivery
-`Pickup\\\\\\\\\\\\\\\_Zone`                       Zone where the restaurant/order was
+`Pickup_Zone`                       Zone where the restaurant/order was
 picked up
-`Dropoff\\\\\\\\\\\\\\\_Zone`                      Destination zone
-`Vehicle\\\\\\\\\\\\\\\_Type`                      Vehicle used for the delivery
-`Rider\\\\\\\\\\\\\\\_Experience\\\\\\\\\\\\\\\_Years`            Rider's experience in years
-`Rider\\\\\\\\\\\\\\\_Rating`                      Rider rating
-`Restaurant\\\\\\\\\\\\\\\_Rating`                 Restaurant rating
-`Cuisine\\\\\\\\\\\\\\\_Type`                      Type of food/cuisine
-`Order\\\\\\\\\\\\\\\_Items`                       Number of items in the order
-`Restaurant\\\\\\\\\\\\\\\_Load`                   Restaurant workload level
-`Preparation\\\\\\\\\\\\\\\_Time\\\\\\\\\\\\\\\_Min`              Time needed to prepare the order
-`Road\\\\\\\\\\\\\\\_Distance\\\\\\\\\\\\\\\_km`                  Road distance in kilometers
-`Delivery\\\\\\\\\\\\\\\_Distance\\\\\\\\\\\\\\\_Category`        Short, Medium, or Long delivery
-`Traffic\\\\\\\\\\\\\\\_Level`                     Low, Moderate, High, or Severe
-`Number\\\\\\\\\\\\\\\_of\\\\\\\\\\\\\\\_Signals`                 Number of traffic signals on the
+`Dropoff_Zone`                      Destination zone
+`Vehicle_Type`                      Vehicle used for the delivery
+`Rider_Experience_Years`            Rider's experience in years
+`Rider_Rating`                      Rider rating
+`Restaurant_Rating`                 Restaurant rating
+`Cuisine_Type`                      Type of food/cuisine
+`Order_Items`                       Number of items in the order
+`Restaurant_Load`                   Restaurant workload level
+`Preparation_Time\_Min`              Time needed to prepare the order
+`Roa_Distance_km`                  Road distance in kilometers
+`Delivery_Distance_Category`        Short, Medium, or Long delivery
+`Traffic_Level`                     Low, Moderate, High, or Severe
+`Number_of_Signals`                 Number of traffic signals on the
 route
-`Average\\\\\\\\\\\\\\\_Speed\\\\\\\\\\\\\\\_kmph`                Average delivery speed
-`Delivery\\\\\\\\\\\\\\\_Priority`                 Normal, Priority, or VIP
-`Time\\\\\\\\\\\\\\\_taken\\\\\\\\\\\\\\\_min`                    Target: actual delivery time in
+`Average_Speed_kmph`                Average delivery speed
+`Delivery\_Priority`                 Normal, Priority, or VIP
+`Time\_taken_min`                    Target: actual delivery time in
 minutes
 ---
 🔎 Data Preparation
@@ -133,26 +133,26 @@ numerical value: delivery time in minutes.
 Features Used
 For the final prediction model, I used these 8 features:
 ``` text
-Preparation\\\\\\\\\\\\\\\_Time\\\\\\\\\\\\\\\_Min
-Road\\\\\\\\\\\\\\\_Distance\\\\\\\\\\\\\\\_km
-Average\\\\\\\\\\\\\\\_Speed\\\\\\\\\\\\\\\_kmph
-Traffic\\\\\\\\\\\\\\\_Level
-Delivery\\\\\\\\\\\\\\\_Distance\\\\\\\\\\\\\\\_Category
-Vehicle\\\\\\\\\\\\\\\_Type
+Preparation_Time_Min
+Road_Distance_km
+Average_Speed_kmph
+Traffic_Level
+Delivery_Distance_Category
+Vehicle_Type
 Weather
-Pickup\\\\\\\\\\\\\\\_Zone
+Pickup_Zone
 ```
 Target
 ``` text
-Time\\\\\\\\\\\\\\\_taken\\\\\\\\\\\\\\\_min
+Time_taken_min
 ```
 The dataset is divided into:
 80% training data
 20% testing data
-using `train\\\\\\\\\\\\\\\_test\\\\\\\\\\\\\\\_split` with:
+using `train\_test\_split` with:
 ``` python
-test\\\\\\\\\\\\\\\_size=0.2
-random\\\\\\\\\\\\\\\_state=42
+test_size=0.2
+random_state=42
 ```
 ---
 ## 📊 Power BI Dashboard
@@ -303,15 +303,15 @@ pip install pandas numpy matplotlib seaborn scikit-learn streamlit
 ```
 3. Make sure the files are in the same folder
 ``` text
-Final\\\\\\\\\\\\\\\_app.ipynb
-Food\\\\\\\\\\\\\\\_Delivery\\\\\\\\\\\\\\\_Time\\\\\\\\\\\\\\\_Prediction.csv
+Final_app.ipynb
+Food_Delivery_Time_Prediction.csv
 app.py
 README.md
 ```
 The CSV file needs to be in the same directory as `app.py` because the
 application loads it using:
 ``` python
-pd.read\\\\\\\\\\\\\\\_csv("Food\\\\\\\\\\\\\\\_Delivery\\\\\\\\\\\\\\\_Time\\\\\\\\\\\\\\\_Prediction.csv")
+pd.read_csv("Food_Delivery_Time_Prediction.csv")
 ```
 4. Run the Streamlit app
 ``` bash
@@ -393,7 +393,7 @@ The general workflow of the project is:
 ``` text
 Dataset
    ↓
-Data Cleaning \\\\\\\\\\\\\\\& Checking
+Data Cleaning & Checking
    ↓
 Exploratory Data Analysis
    ↓
