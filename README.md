@@ -1,5 +1,4 @@
 🍔 Food Delivery Time Prediction
-
 📌 About the Project
 This project is about predicting how long a food order will take to be
 delivered.
